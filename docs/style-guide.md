@@ -22,15 +22,14 @@ Bordová tvorí výrazný kontrast k svetlému pozadiu. Žltá a olivová slúž
 
 ## Písmo
 
-Screenshot naznačuje jednoduché bezpätkové písmo. Presný font sa z obrázka nedá potvrdiť. Použiť možno **Arial** alebo **Helvetica Neue** ako dostupnú alternatívu:
+Všetky hlavné nadpisy na webe (`h1` až `h6`) používajú **DM Serif Display**, ktoré dodáva značke výraznejší a remeselne ladený charakter. Ak font nie je dostupný, použiť pätkovú zálohu **Georgia** alebo všeobecné `serif`.
 
-- Nadpisy: tučné bezpätkové písmo, kompaktné a dobre čitateľné.
+- Nadpisy: DM Serif Display, s primeranou veľkosťou a dobrou čitateľnosťou.
 - Navigácia a tlačidlá: bezpätkové, tučné, menšie, s vysokým kontrastom.
-- Odseky: bežná hrúbka, pohodlná veľkosť a krátka dĺžka riadkov.
+- Odseky: jednoduché bezpätkové písmo, napríklad **Arial** alebo **Helvetica Neue**, v bežnej hrúbke a s krátkou dĺžkou riadkov.
 
 ## Tlačidlá a navigácia
 
-- Hlavné CTA je olivová pilulka s plne zaoblenými koncami, bielym tučným tekstom a bez výrazného tieňa.
 - Hlavné CTA je olivová pilulka s plne zaoblenými koncami, bielym tučným textom a bez výrazného tieňa.
 - Navigácia je umiestnená v bordovej hornej lište; aktívna položka má svetloružovú pilulkovú plochu.
 - Ostatné položky navigácie sú svetlé, stručné a bez dekoratívnych rámikov.
