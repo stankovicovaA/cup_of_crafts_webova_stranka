@@ -93,8 +93,8 @@ h3 {
   width: clamp(60px, 6.67vw, 80px);
   height: clamp(60px, 6.67vw, 80px);
   flex: 0 0 auto;
-  border: 3px solid rgb(170 176 120 / 75%);
   border-radius: 50%;
+  object-fit: contain;
 }
 
 .brand-copy {
@@ -186,7 +186,9 @@ h3 {
   display: flex;
   min-height: 500px;
   align-items: center;
-  background: #928477;
+  background:
+    linear-gradient(90deg, rgb(0 0 0 / 78%) 0%, rgb(0 0 0 / 58%) 42%, rgb(0 0 0 / 24%) 76%, rgb(0 0 0 / 8%) 100%),
+    url("img/stol_uvod.png") center / cover no-repeat;
 }
 
 .hero-inner {
@@ -198,7 +200,7 @@ h3 {
 .hero h1 {
   margin: 0 0 clamp(14px, 1.56vw, 19px);
   color: white;
-  font-family: var(--sans);
+  font-family: var(--serif);
   font-size: clamp(36px, 4vw, 48px);
   font-weight: 700;
   line-height: 1.08;
@@ -433,7 +435,6 @@ input:focus-visible {
 .brand-seal-footer {
   width: clamp(142px, 15.78vw, 189px);
   height: clamp(142px, 15.78vw, 189px);
-  border-width: clamp(7px, 0.78vw, 9px);
 }
 
 .footer-hours h2 {
