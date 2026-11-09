@@ -1,35 +1,169 @@
+          <a class="offer-card" href="#kontakt">
+            <h3>Kaviareň</h3>
 <!doctype html>
 <html lang="sk">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Moje portfólio — začiatok</title>
-  <!-- Vzhľad stránky je v samostatnom súbore styles.css (vrstva CSS) -->
+  <meta name="theme-color" content="#82001f">
+  <meta name="description" content="CUP of CRAFTS spája kreatívne tvorenie, workshopy a kaviareň na jednom mieste.">
+  <title>CUP of CRAFTS | Káva, tvorenie, chvíľa pre seba</title>
   <link rel="stylesheet" href="styles.css">
+  <script src="script.js" defer></script>
 </head>
 <body>
+  <header class="site-header">
+    <div class="header-inner">
+      <a class="brand" href="#domov" aria-label="CUP of CRAFTS, domov">
+        <span class="brand-seal" aria-hidden="true">CC</span>
+        <span class="brand-copy">
+          <span class="brand-name">CUP of CRAFTS</span>
+          <span class="brand-tagline">Kreatívna kaviareň</span>
+        </span>
+      </a>
 
-  <main class="uvitanie">
-    <div class="emoji">👋</div>
-    <h1>Tu vznikne moje portfólio</h1>
-    <p class="podtext">
-      Toto je štartová stránka kurzu <strong>Tvorba webstránok</strong>.
-      Odteraz ju budeš meniť ty — s pomocou AI asistenta.
-    </p>
+      <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="main-nav" aria-label="Otvoriť navigáciu">
+        <span></span><span></span><span></span>
+      </button>
 
-    <div class="karta">
-      <p class="karta-nadpis">Ako začať:</p>
-      <ol>
-        <li>Otvor <strong>Copilot Chat</strong> (ikona Copilota vpravo) — sem píšeš, čo chceš vytvoriť.</li>
-        <li>Tento súbor <code>index.html</code> si pozri v <strong>živom náhľade</strong>: pravý klik naň → <em>Show Preview</em>.</li>
-        <li>Choď na <strong>Blok 7</strong> kurzu a postupuj podľa neho.</li>
-      </ol>
+      <nav class="main-nav" id="main-nav" aria-label="Hlavná navigácia">
+        <a class="nav-link is-active" href="#domov" aria-current="page">Domov</a>
+        <a class="nav-link" href="#tvorenie">Tvorenie</a>
+        <a class="nav-link" href="#workshopy">Workshopy</a>
+        <a class="nav-link" href="#kaviaren">Kaviareň</a>
+        <a class="nav-link" href="#kontakt">Kontakt</a>
+      </nav>
+
+      <form class="site-search" role="search">
+        <label class="visually-hidden" for="site-search-input">Hľadať na stránke</label>
+        <input id="site-search-input" name="q" type="search" placeholder="Hľadať" autocomplete="off">
+        <button class="search-button" type="submit" aria-label="Hľadať"></button>
+      </form>
     </div>
+  </header>
 
-    <p class="poznamka">
-      Keď spravíš prvú zmenu, tento text pokojne zmaž — je len na úvod.
-    </p>
+  <main>
+    <section class="hero searchable" id="domov" aria-labelledby="hero-title">
+      <div class="hero-inner">
+        <p class="eyebrow">Kreatívna kaviareň</p>
+        <h1 id="hero-title">Káva.<br>Tvorenie.<br>Chvíľa pre seba.</h1>
+        <p class="hero-copy">Príď si vychutnať kávu, oddýchnuť si a vytvoriť niečo pre radosť.</p>
+        <a class="button button-primary" href="#tvorenie">Objaviť tvorenie</a>
+      </div>
+    </section>
+
+    <section class="intro section-shell searchable" id="tvorenie" aria-labelledby="intro-title">
+      <div class="intro-copy">
+        <p class="eyebrow eyebrow-dark">Tvorenie pri káve</p>
+        <h2 id="intro-title">Viac ako kaviareň</h2>
+        <p>Pomôcky aj materiály ťa čakajú u nás. Naše police sú plné kreatívnych potrieb – od farieb na plátno cez hlinu až po vosk na sviečky.</p>
+        <p>Stačí si vybrať aktivitu, objednať si obľúbený nápoj a užívať si tvorivý proces.</p>
+      </div>
+      <div class="intro-note" aria-label="Všetko na tvorenie nájdeš na jednom mieste">
+        <span class="note-rule" aria-hidden="true"></span>
+        <p>Vyber si aktivitu.<br>O zvyšok sa postaráme.</p>
+        <span class="note-caption">Materiál aj pomôcky na mieste</span>
+      </div>
+    </section>
+
+    <section class="offer-section searchable" id="ponuka" aria-labelledby="offer-title">
+      <div class="section-shell">
+        <p class="eyebrow eyebrow-dark">Nájdi si svoj spôsob</p>
+        <h2 id="offer-title">Čo v CUP of CRAFTS ponúkame?</h2>
+        <div class="offer-grid">
+          <a class="offer-card" href="#tvorenie">
+            <span class="offer-number">01</span>
+            <h3>Voľné tvorenie</h3>
+            <p>Vyber si aktivitu a tvor vlastným tempom.</p>
+            <span class="card-arrow" aria-hidden="true">↗</span>
+          </a>
+          <a class="offer-card" href="#skupiny">
+            <span class="offer-number">02</span>
+            <h3>Skupinové tvorenie</h3>
+            <p>Spoločný kreatívny čas pre tvoju partiu.</p>
+            <span class="card-arrow" aria-hidden="true">↗</span>
+          </a>
+          <a class="offer-card" href="#workshopy">
+            <span class="offer-number">03</span>
+            <h3>Workshopy</h3>
+            <p>Objav nové techniky pod vedením lektora.</p>
+            <span class="card-arrow" aria-hidden="true">↗</span>
+          </a>
+          <a class="offer-card" href="#kaviaren">
+            <span class="offer-number">04</span>
+            <h3>Kaviar(e)ň</h3>
+            <p>Dopraj si obľúbený nápoj a chvíľu pre seba.</p>
+            <span class="card-arrow" aria-hidden="true">↗</span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <section class="feature-row section-shell searchable" aria-labelledby="free-create-title">
+      <div class="feature-panel feature-panel-olive" aria-hidden="true">
+        <span class="panel-index">01 / TVORENIE</span>
+        <span class="panel-word">Tvor<br>po svojom.</span>
+      </div>
+      <div class="feature-copy">
+        <p class="eyebrow eyebrow-dark">Vo vlastnom tempe</p>
+        <h2 id="free-create-title">Voľné tvorenie</h2>
+        <p>Od maľovania na plátno až po modelovanie. Vyber si, čo ťa láka, a uži si kreatívny relax bez starostí o vlastné pomôcky.</p>
+        <a class="button button-secondary" href="#kontakt">Tvorenie</a>
+      </div>
+    </section>
+
+    <section class="feature-band searchable" id="workshopy" aria-labelledby="workshop-title">
+      <div class="feature-row section-shell feature-row-reverse">
+        <div class="feature-panel feature-panel-pink" aria-hidden="true">
+          <span class="panel-index">02 / WORKSHOPY</span>
+          <span class="panel-word">Skús<br>niečo nové.</span>
+        </div>
+        <div class="feature-copy">
+          <p class="eyebrow eyebrow-dark">Tvorenie s lektorom</p>
+          <h2 id="workshop-title">Workshopy s lektorom</h2>
+          <p>Nauč sa novú techniku na tvorivom workshope. Čaká ťa vedený program, príjemná atmosféra a vlastný výtvor, ktorý si odnesieš domov.</p>
+          <a class="button button-secondary" href="#kontakt">Workshopy</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="feature-row section-shell searchable" id="kaviaren" aria-labelledby="cafe-title">
+      <div class="feature-panel feature-panel-yellow" aria-hidden="true">
+        <span class="panel-index">03 / KAVIAREŇ</span>
+        <span class="panel-word">Malá pauza<br>pre seba.</span>
+      </div>
+      <div class="feature-copy">
+        <p class="eyebrow eyebrow-dark">Káva a niečo dobré</p>
+        <h2 id="cafe-title">Malá pauza na niečo dobré</h2>
+        <p>Ku každej kreatívnej chvíli patrí aj dobrá káva. Zastav sa, vychutnaj si obľúbený nápoj a dopraj si chvíľu len pre seba.</p>
+        <a class="button button-secondary" href="#kontakt">Kaviareň</a>
+      </div>
+    </section>
+
+    <section class="group-callout searchable" id="skupiny" aria-labelledby="group-title">
+      <a href="#kontakt">Rezervácia skupinového tvorenia</a>
+    <p class="search-status visually-hidden" id="search-status" aria-live="polite"></p>
   </main>
 
+  <footer class="site-footer" id="kontakt">
+    <div class="footer-inner section-shell">
+      <a class="footer-brand" href="#domov" aria-label="CUP of CRAFTS, späť na začiatok">
+        <span class="brand-seal brand-seal-footer" aria-hidden="true">CC</span>
+        <span><strong>CUP of CRAFTS</strong><small>Kreatívna kaviareň</small></span>
+      </a>
+      <div class="footer-contact">
+        <h2>Kontakt a návšteva</h2>
+        <a href="#kontakt">Kontakt a otváracie hodiny</a>
+        <a href="#skupiny">Rezervácia skupinového tvorenia</a>
+      </div>
+      <nav class="footer-nav" aria-label="Navigácia v pätičke">
+        <a href="#domov">Domov</a>
+        <a href="#tvorenie">Tvorenie</a>
+        <a href="#workshopy">Workshopy</a>
+        <a href="#kaviaren">Kaviareň</a>
+        <a href="#kontakt">Kontakt</a>
+      </nav>
+    </div>
+  </footer>
 </body>
 </html>
