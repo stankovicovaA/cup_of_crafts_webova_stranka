@@ -40,12 +40,8 @@ h3 {
 }
 
 .section-shell {
-  width: min(100% - 48px, 1200px);
+  width: min(100% - 48px, 752px);
   margin-inline: auto;
-}
-
-main > section {
-  width: 100%;
 }
 
 .visually-hidden {
@@ -78,7 +74,7 @@ main > section {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  width: min(100% - 64px, 1200px);
+  width: min(100% - 64px, 830px);
   min-height: 86px;
   margin-inline: auto;
   gap: 20px;
@@ -194,7 +190,7 @@ main > section {
 }
 
 .hero-inner {
-  width: min(100% - 48px, 1200px);
+  width: min(100% - 48px, 752px);
   margin: 0 auto;
   padding-block: 35px;
 }
@@ -257,7 +253,7 @@ input:focus-visible {
   color: white;
 }
 
-.intro-inner {
+.intro {
   display: grid;
   min-height: 368px;
   grid-template-columns: 1fr 1fr;
@@ -293,12 +289,13 @@ input:focus-visible {
 }
 
 .offer-section {
+  margin: 0 14px;
   padding: 20px 0 50px;
   background: var(--yellow);
 }
 
 .offer-inner {
-  width: min(100% - 48px, 1200px);
+  width: min(100% - 48px, 780px);
 }
 
 .offer-section h2 {
@@ -389,6 +386,7 @@ input:focus-visible {
 }
 
 .feature-band {
+  margin: 0 2px;
   background: var(--pink);
 }
 
@@ -409,20 +407,19 @@ input:focus-visible {
 }
 
 .site-footer {
-  width: 100%;
+  width: min(100% - 100px, 900px);
   min-height: 247px;
+  margin: 0 auto;
   background: var(--burgundy);
   color: white;
 }
 
 .footer-inner {
   display: grid;
-  width: min(100% - 48px, 1200px);
   min-height: 247px;
   grid-template-columns: 1.15fr 1.35fr 1.3fr 0.75fr;
   align-items: center;
   gap: 28px;
-  margin-inline: auto;
   padding: 32px 52px;
 }
 
@@ -562,7 +559,6 @@ input:focus-visible {
   }
 
   .footer-inner {
-    width: min(100% - 48px, 1200px);
     grid-template-columns: 0.8fr 1.2fr 1.2fr;
     padding-inline: 28px;
   }
@@ -668,7 +664,7 @@ input:focus-visible {
     display: none;
   }
 
-  .intro-inner {
+  .intro {
     min-height: 0;
     grid-template-columns: 1fr;
     gap: 30px;
@@ -690,11 +686,12 @@ input:focus-visible {
   }
 
   .offer-section {
+    margin-inline: 8px;
     padding-block: 28px 32px;
   }
 
   .offer-inner {
-    width: min(100% - 40px, 440px);
+    width: min(100% - 28px, 440px);
   }
 
   .offer-section h2 {
@@ -754,11 +751,14 @@ input:focus-visible {
   }
 
   .footer-inner {
-    width: min(100% - 40px, 440px);
     min-height: 0;
     grid-template-columns: 1fr 1fr;
     gap: 30px 20px;
     padding: 34px 22px;
+  }
+
+  .site-footer {
+    width: calc(100% - 24px);
   }
 
   .footer-brand {
