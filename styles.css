@@ -663,8 +663,21 @@ input:focus-visible {
 }
 
 .craft-card-space {
+  display: block;
+  width: 100%;
+  height: 280px;
   min-height: 280px;
   border-radius: 42px;
+  object-fit: cover;
+}
+
+.craft-card::after {
+  position: absolute;
+  inset: 0;
+  border-radius: 42px;
+  background: linear-gradient(180deg, transparent 40%, rgb(0 0 0 / 68%) 100%);
+  content: "";
+  pointer-events: none;
 }
 
 .craft-card h3 {
@@ -674,7 +687,7 @@ input:focus-visible {
   bottom: 20px;
   left: 30px;
   margin: 0;
-  color: var(--burgundy);
+  color: white;
   font-size: clamp(17px, 1.56vw, 19px);
   line-height: 1.2;
 }
@@ -778,7 +791,7 @@ input:focus-visible {
   bottom: 22px;
   width: 112px;
   height: 112px;
-  border-radius: 50%;
+  object-fit: contain;
 }
 
 [data-search-match="true"] {
@@ -853,6 +866,10 @@ input:focus-visible {
   .craft-card,
   .craft-card-space {
     min-height: 220px;
+  }
+
+  .craft-card-space {
+    height: 220px;
   }
 
   .creation-pricing {
@@ -1017,6 +1034,10 @@ input:focus-visible {
     min-height: 180px;
   }
 
+  .craft-card-space {
+    height: 180px;
+  }
+
   .craft-card h3 {
     right: 10px;
     bottom: 12px;
@@ -1137,8 +1158,8 @@ input:focus-visible {
 
   .site-search {
     position: absolute;
-    right: 67px;
-    width: 112px;
+    right: 56px;
+    width: clamp(88px, 22vw, 112px);
   }
 
   .hero {
