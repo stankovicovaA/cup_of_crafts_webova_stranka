@@ -103,6 +103,7 @@ h3 {
 }
 
 .brand-name {
+  font-family: var(--serif);
   font-size: clamp(18px, 2vw, 24px);
   font-weight: 700;
   white-space: nowrap;
@@ -184,11 +185,11 @@ h3 {
 
 .hero {
   display: flex;
-  min-height: 500px;
+  min-height: 550px;
   align-items: center;
   background:
     linear-gradient(90deg, rgb(0 0 0 / 78%) 0%, rgb(0 0 0 / 58%) 42%, rgb(0 0 0 / 24%) 76%, rgb(0 0 0 / 8%) 100%),
-    url("img/stol_uvod.png") center / cover no-repeat;
+    url("img/hero1.jpg") center / cover no-repeat;
 }
 
 .hero-inner {
@@ -257,7 +258,7 @@ input:focus-visible {
 
 .intro {
   display: grid;
-  min-height: 500px;
+  min-height: 550px;
   grid-template-columns: 1fr 1fr;
   align-items: center;
   gap: clamp(74px, 8.22vw, 99px);
@@ -291,9 +292,9 @@ input:focus-visible {
 }
 
 .offer-section {
-  margin: 0 clamp(14px, 1.56vw, 19px);
-  min-height: 500px;
-  padding: clamp(20px, 2.23vw, 27px) 0 clamp(50px, 5.56vw, 67px);
+  margin: clamp(18px, 2vw, 24px) clamp(14px, 1.56vw, 19px) 0;
+  min-height: 550px;
+  padding: clamp(56px, 6.2vw, 76px) 0 clamp(50px, 5.56vw, 67px);
   background: var(--yellow);
 }
 
@@ -354,7 +355,7 @@ input:focus-visible {
 
 .feature-row {
   display: flex;
-  min-height: 500px;
+  min-height: 550px;
   align-items: center;
   justify-content: space-between;
   gap: clamp(78px, 8.67vw, 104px);
@@ -390,7 +391,7 @@ input:focus-visible {
 
 .feature-band {
   margin: 0 clamp(2px, 0.22vw, 3px);
-  min-height: 500px;
+  min-height: 550px;
   background: var(--pink);
 }
 
@@ -403,7 +404,7 @@ input:focus-visible {
 }
 
 .cafe-row {
-  min-height: 500px;
+  min-height: 550px;
 }
 
 .cafe-image {
@@ -653,7 +654,7 @@ input:focus-visible {
   }
 
   .hero {
-    min-height: 500px;
+    min-height: 550px;
   }
 
   .hero-inner,
@@ -670,7 +671,7 @@ input:focus-visible {
   }
 
   .intro {
-    min-height: 500px;
+    min-height: 550px;
     grid-template-columns: 1fr;
     gap: 30px;
     padding-block: 54px;
@@ -725,7 +726,7 @@ input:focus-visible {
 
   .feature-row,
   .feature-row-reverse {
-    min-height: 500px;
+    min-height: 550px;
     flex-direction: column;
     align-items: stretch;
     gap: 26px;
@@ -748,7 +749,7 @@ input:focus-visible {
   }
 
   .cafe-row {
-    min-height: 500px;
+    min-height: 550px;
   }
 
   .cafe-image {
