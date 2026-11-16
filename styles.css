@@ -290,6 +290,7 @@ input:focus-visible {
   justify-self: center;
   transform: rotate(7deg);
   border: 8px solid #ded9b9;
+  box-shadow: 0 5px 12px rgb(51 43 39 / 22%);
   object-fit: cover;
 }
 
@@ -343,6 +344,7 @@ input:focus-visible {
   width: clamp(82px, 9.12vw, 110px);
   height: clamp(82px, 9.12vw, 110px);
   margin-bottom: clamp(12px, 1.34vw, 16px);
+  filter: drop-shadow(0 4px 5px rgb(51 43 39 / 22%));
   object-fit: contain;
 }
 
@@ -382,15 +384,7 @@ input:focus-visible {
   width: clamp(300px, 33.33vw, 400px);
   height: clamp(300px, 33.33vw, 400px);
   flex: 0 0 clamp(300px, 33.33vw, 400px);
-}
-
-.workshop-image {
-  border: 8px solid #ded9b9;
-  object-fit: cover;
-}
-
-.free-create-image {
-  border: 8px solid #ded9b9;
+  box-shadow: 0 5px 12px rgb(51 43 39 / 22%);
   object-fit: cover;
 }
 
@@ -435,8 +429,6 @@ input:focus-visible {
 
 .cafe-image {
   margin-left: clamp(-16px, -1.33vw, -12px);
-  border: 8px solid #ded9b9;
-  object-fit: cover;
   object-position: center 70%;
 }
 
