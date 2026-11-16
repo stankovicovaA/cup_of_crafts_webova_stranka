@@ -117,12 +117,12 @@ h3 {
 .main-nav {
   display: flex;
   align-items: center;
-  gap: clamp(14px, 3vw, 36px);
+  gap: clamp(8px, 1.8vw, 22px);
   margin-left: auto;
 }
 
 .nav-link {
-  padding: clamp(5px, 0.56vw, 7px) clamp(13px, 1.45vw, 17px);
+  padding: clamp(5px, 0.56vw, 7px) clamp(10px, 1.2vw, 14px);
   border-radius: 20px;
   color: white;
   font-size: clamp(11px, 1.22vw, 15px);
