@@ -590,9 +590,15 @@ input:focus-visible {
   padding-inline: clamp(24px, 4vw, 48px);
 }
 
+.creation-steps h2,
+.craft-options h2,
+.pricing-card h2,
+.creation-groups h2 {
+  font-size: clamp(26px, 2.67vw, 32px);
+}
+
 .creation-steps h2 {
   margin: 0 0 40px;
-  font-size: clamp(26px, 2.67vw, 32px);
   text-align: center;
 }
 
@@ -660,7 +666,6 @@ input:focus-visible {
 
 .craft-options h2 {
   margin: 0 0 46px;
-  font-size: clamp(26px, 2.67vw, 32px);
 }
 
 .craft-grid {
@@ -744,18 +749,17 @@ input:focus-visible {
 
 .pricing-card h2 {
   margin: 0 0 14px;
-  font-size: 26px;
 }
 
 .pricing-card p {
   margin: 0 0 16px;
-  font-size: 15px;
+  font-size: 18px;
   line-height: 1.55;
 }
 
 .pricing-card .pricing-note {
   margin: 2px 0 0;
-  font-size: 13px;
+  font-size: 18px;
 }
 
 .creation-groups {
@@ -778,17 +782,19 @@ input:focus-visible {
 
 .creation-groups h2 {
   margin: 0 0 8px;
-  font-size: 26px;
+  transform: translateY(-8px);
 }
 
 .creation-groups .group-capacity {
   margin: 0 0 20px;
-  font-size: 17px;
+  font-size: 18px;
+  color: var(--text);
+  font-weight: 700;
 }
 
 .creation-groups p:not(.group-capacity) {
-  margin: 0 0 22px;
-  font-size: 15px;
+  margin: 0 0 36px;
+  font-size: 18px;
   line-height: 1.4;
 }
 
@@ -796,15 +802,6 @@ input:focus-visible {
   min-width: 150px;
   min-height: 42px;
   font-size: 14px;
-}
-
-.group-illustration {
-  position: absolute;
-  right: 7%;
-  bottom: 22px;
-  width: 112px;
-  height: 112px;
-  object-fit: contain;
 }
 
 [data-search-match="true"] {
@@ -895,12 +892,6 @@ input:focus-visible {
 
   .creation-groups-inner {
     padding-inline: 90px;
-  }
-
-  .group-illustration {
-    right: 10px;
-    width: 80px;
-    height: 80px;
   }
 
   .header-inner {
@@ -1004,7 +995,6 @@ input:focus-visible {
 
   .creation-steps h2 {
     margin-bottom: 26px;
-    font-size: 26px;
   }
 
   .steps-grid {
@@ -1034,7 +1024,6 @@ input:focus-visible {
 
   .craft-options h2 {
     margin-bottom: 24px;
-    font-size: 26px;
   }
 
   .craft-grid {
@@ -1075,12 +1064,8 @@ input:focus-visible {
     padding: 18px 12px;
   }
 
-  .pricing-card h2 {
-    font-size: 23px;
-  }
-
   .pricing-card p {
-    font-size: 13px;
+    font-size: 18px;
   }
 
   .creation-groups-inner {
@@ -1088,15 +1073,8 @@ input:focus-visible {
     padding: 30px 24px 105px;
   }
 
-  .group-illustration {
-    right: 12px;
-    bottom: 8px;
-    width: 74px;
-    height: 74px;
-  }
-
   .creation-groups p:not(.group-capacity) {
-    font-size: 13px;
+    font-size: 18px;
   }
 
   .site-header,
