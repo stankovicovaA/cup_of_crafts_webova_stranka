@@ -587,7 +587,7 @@ input:focus-visible {
 }
 
 .creation-steps-inner {
-  padding-inline: clamp(36px, 6vw, 100px);
+  padding-inline: clamp(24px, 4vw, 48px);
 }
 
 .creation-steps h2 {
@@ -598,8 +598,9 @@ input:focus-visible {
 
 .steps-grid {
   display: grid;
-  grid-template-columns: repeat(4, minmax(0, 1fr));
-  gap: clamp(24px, 3.4vw, 52px);
+  grid-template-columns: repeat(4, 230px);
+  justify-content: center;
+  gap: clamp(20px, 3.4vw, 36px);
   margin: 0;
   padding: 0;
   list-style: none;
@@ -607,33 +608,44 @@ input:focus-visible {
 
 .step-card {
   display: flex;
-  min-height: 230px;
+  width: 230px;
+  height: 265px;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   padding: 28px 18px;
-  border-radius: 58px;
+  border-radius: 38px;
   background: var(--card);
   text-align: center;
 }
 
 .step-number {
   display: grid;
-  width: 76px;
+  width: 46px;
   aspect-ratio: 1;
   place-items: center;
-  margin-bottom: 38px;
+  margin-bottom: 26px;
   border-radius: 50%;
   background: var(--pink);
   color: var(--text);
-  font-size: 30px;
+  font-size: 18px;
   font-weight: 700;
 }
 
 .step-card h3 {
+  display: grid;
+  width: 100%;
+  min-height: 3.75em;
+  place-items: center;
   margin: 0;
-  font-size: clamp(18px, 1.67vw, 20px);
+  font-size: clamp(15px, 1.3vw, 17px);
   line-height: 1.25;
+}
+
+@media (max-width: 1190px) {
+  .steps-grid {
+    grid-template-columns: repeat(2, 230px);
+  }
 }
 
 .craft-options {
@@ -703,10 +715,10 @@ input:focus-visible {
 .pricing-frame {
   position: relative;
   display: grid;
-  width: min(100% - 64px, 720px);
-  min-height: 300px;
+  width: min(100% - 96px, 1100px);
+  aspect-ratio: 2.35;
   place-items: center;
-  padding: 34px 0;
+  padding: 28px 0;
 }
 
 .pricing-frame-image {
@@ -721,21 +733,21 @@ input:focus-visible {
   position: relative;
   z-index: 1;
   display: grid;
-  width: min(78%, 520px);
+  width: 78%;
   place-content: center;
-  padding: 20px 28px;
+  padding: 16px 28px;
   border-radius: 6px;
   background: var(--cream);
   text-align: center;
 }
 
 .pricing-card h2 {
-  margin: 0 0 16px;
+  margin: 0 0 14px;
   font-size: 26px;
 }
 
 .pricing-card p {
-  margin: 0 0 20px;
+  margin: 0 0 16px;
   font-size: 15px;
   line-height: 1.55;
 }
@@ -840,7 +852,7 @@ input:focus-visible {
   }
 
   .steps-grid {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
+    grid-template-columns: repeat(2, 230px);
     gap: 20px;
   }
 
@@ -850,9 +862,9 @@ input:focus-visible {
   }
 
   .step-number {
-    width: 62px;
+    width: 44px;
     margin-bottom: 24px;
-    font-size: 25px;
+    font-size: 18px;
   }
 
   .craft-options {
@@ -877,8 +889,8 @@ input:focus-visible {
   }
 
   .pricing-frame {
-    width: min(100% - 40px, 680px);
-    min-height: 280px;
+    width: min(100% - 40px, 900px);
+    aspect-ratio: 2.2;
   }
 
   .creation-groups-inner {
@@ -996,6 +1008,7 @@ input:focus-visible {
   }
 
   .steps-grid {
+    grid-template-columns: 230px;
     gap: 12px;
   }
 
@@ -1006,9 +1019,9 @@ input:focus-visible {
   }
 
   .step-number {
-    width: 52px;
+    width: 40px;
     margin-bottom: 18px;
-    font-size: 22px;
+    font-size: 17px;
   }
 
   .step-card h3 {
@@ -1056,13 +1069,14 @@ input:focus-visible {
 
   .pricing-frame {
     width: calc(100% - 20px);
-    min-height: 250px;
-    padding-block: 34px;
+    aspect-ratio: auto;
+    min-height: 350px;
+    padding: 34px 0;
   }
 
   .pricing-card {
-    width: 76%;
-    padding: 16px 10px;
+    width: 78%;
+    padding: 18px 12px;
   }
 
   .pricing-card h2 {
