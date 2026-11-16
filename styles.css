@@ -497,12 +497,11 @@ input:focus-visible {
   margin: 0;
 }
 
-.footer-contact p > span {
-  width: clamp(14px, 1.56vw, 19px);
-  flex: 0 0 clamp(14px, 1.56vw, 19px);
-  font-size: clamp(15px, 1.67vw, 20px);
-  font-weight: 700;
-  text-align: center;
+.footer-contact-icon {
+  width: 20px;
+  height: 20px;
+  flex: 0 0 20px;
+  color: var(--pink);
 }
 
 .footer-contact a {
