@@ -1,51 +1,65 @@
 # Style guide: CUP of CRAFTS
 
-Vizuálna referencia vychádza z dodaného screenshotu domovskej stránky. Farebné kódy a typografia sú odhady podľa zobrazeného obrázka, nie z originálnych zdrojových súborov.
+Tento guide opisuje aktuálny vizuálny štýl domovskej stránky v `index.html`. Hodnoty farieb a rozloženia vychádzajú z `styles.css`, ktorý je zdrojom pravdy pri úpravách vzhľadu.
 
 ## Vizuálny smer
 
-Priateľská kreatívna kaviareň, ktorá spája tvorenie a oddych pri káve. Dojem je útulný, domácky a mierne hravý, no rozloženie zostáva čisté a ľahko čitateľné. Fotografie skutočných materiálov a priestoru sú hlavnými vizuálnymi prvkami; dopĺňajú ich jemné ilustrácie a papierové textúry.
+CUP of CRAFTS spája kreatívne tvorenie s oddychom pri káve. Vizuál má pôsobiť útulne, priateľsky a mierne hravo, pričom obsah zostáva prehľadný a ľahko čitateľný. Základ tvoria teplé svetlé plochy, bordová značka a fotografie priestoru, tvorenia a občerstvenia.
 
 ## Farebná paleta
 
-| Použitie | Odhad farby | HEX |
+| Použitie | Farba | HEX |
 | --- | --- | --- |
-| Hlavná značka, hlavička a nadpisy | tmavá bordová | `#82001F` |
+| Značka, hlavička a pätička | bordová | `#82001F` |
 | Základ stránky | teplá krémová | `#FFF7EC` |
-| Zvýraznené sekcie | jemná maslová žltá | `#F4DA83` |
-| Primárne CTA | tlmená olivová | `#B6BC79` |
-| Jemné akcenty a navigácia | púdrová ružová | `#EFC0C6` |
-| Karty / svetlé plochy | slonovinová biela | `#FFF9F0` |
-| Bežný text | tmavá teplá hnedosivá | `#332B27` |
+| Sekcia ponuky | maslová žltá | `#F4DA83` |
+| Primárne a sekundárne tlačidlá | tlmená olivová | `#AAB078` |
+| Zvýraznenie navigácie a pás s workshopmi | púdrová ružová | `#EFC0C6` |
+| Karty a svetlé prvky v pätičke | slonovinová biela | `#FFF9F0` |
+| Hlavný text | teplá tmavá hnedosivá | `#332B27` |
+| Pozadie náhradného obrázka | svetlá béžová | `#E9E1D5` |
 
-Bordová tvorí výrazný kontrast k svetlému pozadiu. Žltá a olivová slúžia na menšie zvýraznené plochy a akcie; nepoužívať ich ako dominantnú farbu celej stránky.
+Bordová a krémová tvoria základ kontrastu. Žltá odlišuje ponuku, ružová zvýrazňuje pás s workshopmi a aktívnu položku navigácie. Olivová je vyhradená pre tlačidlá.
 
-## Písmo
+## Písmo a text
 
-Všetky hlavné nadpisy na webe (`h1` až `h6`) používajú **DM Serif Display**, ktoré dodáva značke výraznejší a remeselne ladený charakter. Ak font nie je dostupný, použiť pätkovú zálohu **Georgia** alebo všeobecné `serif`.
+- Nadpisy `h1`, `h2` a `h3` používajú fontový zásobník `"DM Serif Display", Georgia, serif`. Ak DM Serif Display nie je v systéme dostupný, zobrazí sa Georgia.
+- Text, navigácia a ovládacie prvky používajú `Arial, "Helvetica Neue", sans-serif`.
+- Nadpisy kariet ponuky a nadpis otváracích hodín v pätičke používajú bezpätkové písmo.
+- Bežný text má základnú veľkosť 15 px; veľkosti nadpisov, odsekov a ovládacích prvkov sa prispôsobujú šírke obrazovky.
+- Text na hero fotografii je biely, tučný a doplnený tieňom pre lepšiu čitateľnosť.
 
-- Nadpisy: DM Serif Display, s primeranou veľkosťou a dobrou čitateľnosťou.
-- Navigácia a tlačidlá: bezpätkové, tučné, menšie, s vysokým kontrastom.
-- Odseky: jednoduché bezpätkové písmo, napríklad **Arial** alebo **Helvetica Neue**, v bežnej hrúbke a s krátkou dĺžkou riadkov.
+## Hlavička, navigácia a tlačidlá
 
-## Tlačidlá a navigácia
+- Hlavička je bordová; obsahuje kruhové logo, názov a slogan značky, navigáciu a vyhľadávanie.
+- Aktívna položka navigácie, ako aj položka pri prejdení myšou alebo klávesnicovým fokusom, má ružové pozadie a tmavý text.
+- Na úzkych obrazovkách sa navigácia zmení na rozbaľovacie menu s tlačidlom hamburger; vyhľadávanie zostáva dostupné.
+- Bežné CTA tlačidlá sú olivové, biele, tučné a zaoblené. Text tlačidiel je veľkými písmenami.
+- Tlačidlo v pätičke používa svetlý podklad a bordový text.
+- Interaktívne prvky majú viditeľný stav pri fokuse. Animácie sa obmedzia pri zapnutom systémovom nastavení „reduced motion“.
 
-- Hlavné CTA je olivová pilulka s plne zaoblenými koncami, bielym tučným textom a bez výrazného tieňa.
-- Navigácia je umiestnená v bordovej hornej lište; aktívna položka má svetloružovú pilulkovú plochu.
-- Ostatné položky navigácie sú svetlé, stručné a bez dekoratívnych rámikov.
-- Zachovať dostatočný kontrast, pohodlnú klikaciu plochu a viditeľný stav pri hover/focus.
+## Štruktúra domovskej stránky
 
-## Rozloženie a obrazový štýl
+1. **Hero** – široká fotografia pozadia s tmavým prechodovým prekrytím, sloganom a CTA „Objaviť tvorenie“.
+2. **Viac ako kaviareň** – úvodný text a štvorcová fotografia vedľa seba.
+3. **Ponuka** – žltá plocha so štyrmi svetlými kartami: voľné tvorenie, skupinové tvorenie, workshopy a kaviareň. Karty obsahujú ilustráciu, nadpis a krátky opis.
+4. **Voľné tvorenie** – striedanie fotografie a textu na krémovom pozadí.
+5. **Workshopy s lektorom** – ružový pás s obrázkom a textom v opačnom poradí.
+6. **Kaviareň** – fotografia a text na krémovom pozadí.
+7. **Pätička** – bordové pozadie, logo, otváracie hodiny, kontakty a navigácia.
 
-- Široká bordová hlavička s logom vľavo a kompaktnou navigáciou.
-- Veľká úvodná fotografia cez šírku hlavného obsahu; text a CTA sú položené na fotografii s dostatočným tmavým prekrytím pre čitateľnosť.
-- Obsahové sekcie striedajú text a fotografiu, s veľkorysým krémovým priestorom okolo.
-- Ponuku služieb možno zobraziť na žltej ploche so svetlými kartami a drobnými ilustráciami.
-- Fotografie majú prirodzené teplé svetlo a zachytávajú skutočné tvorenie, kávu, materiály a priestor. Drobné naklonenie alebo papierový rám okolo jednej fotografie dodá ručne vytvorený charakter.
+Obsahové sekcie majú priestranné odsadenie. Fotografie sú prirodzené a teplé, zobrazujú skutočný priestor, tvorenie alebo občerstvenie; používajú sa bez dekoratívnych papierových rámov.
+
+## Responzívne správanie
+
+- Pri šírke do 1100 px sa karty ponuky zobrazia v dvoch stĺpcoch.
+- Do 760 px sa zmenšia rozostupy, obrázky a obsah pätičky sa prispôsobia užšiemu rozloženiu.
+- Do 560 px sa navigácia zmení na rozbaľovacie menu; úvodné a obsahové sekcie, ponuka aj pätička sa usporiadajú pre mobil.
+- Hero text zostáva kontrastný aj na menších obrazovkách vďaka tmavému prekrytiu fotografie.
 
 ## Princípy
 
-1. Uprednostniť teplé, prirodzené fotografie pred abstraktnou dekoráciou.
-2. Zachovať krémový základ a bordovú ako hlavný kontrast.
-3. Používať jemné akcenty striedmo a nezahltiť stránku ozdobami.
-4. Udržať text čitateľný na fotografiách aj pri zmenšení na mobil.
+1. Zachovať bordovú a krémovú ako základné farby značky.
+2. Používať žltú, ružovú a olivovú podľa ich účelu v palete, nie ako náhradu základných farieb.
+3. Uprednostňovať fotografie tvorenia, kaviarne a materiálov pred abstraktnou dekoráciou.
+4. Udržiavať jasnú hierarchiu, čitateľný kontrast a pohodlne ovládateľné prvky na každej šírke obrazovky.
