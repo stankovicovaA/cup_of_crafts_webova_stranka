@@ -284,11 +284,13 @@ input:focus-visible {
 }
 
 .intro-image {
+  display: block;
   width: clamp(250px, 27.8vw, 334px);
   aspect-ratio: 1;
   justify-self: center;
   transform: rotate(7deg);
   border: 8px solid #ded9b9;
+  object-fit: cover;
 }
 
 .offer-section {
