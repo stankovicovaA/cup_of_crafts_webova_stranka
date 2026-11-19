@@ -1697,7 +1697,7 @@ input:focus-visible {
 }
 
 .cafe-offer-inner {
-  width: min(100% - 64px, 780px);
+  width: min(100% - 64px, 1020px);
   margin-inline: auto;
 }
 
@@ -1710,14 +1710,20 @@ input:focus-visible {
 
 .cafe-offer-grid {
   display: grid;
-  grid-template-columns: repeat(3, 220px);
+  grid-template-columns: repeat(3, minmax(0, 315px));
   justify-content: center;
-  gap: clamp(18px, 2vw, 24px);
+  gap: 24px;
 }
 
 .cafe-offer-card {
+  display: flex;
+  width: 100%;
+  max-width: 315px;
+  height: 350px;
   min-width: 0;
-  min-height: 252px;
+  flex-direction: column;
+  align-items: center;
+  justify-self: center;
   padding: 14px;
   border-radius: clamp(28px, 3.4vw, 40px);
   background: var(--card);
@@ -1732,10 +1738,21 @@ input:focus-visible {
 }
 
 .cafe-offer-card h3 {
-  margin: clamp(14px, 1.7vw, 20px) 4px 0;
+  margin: clamp(28px, 2.7vw, 34px) 4px 0;
   font-family: var(--sans);
   font-size: clamp(16px, 1.78vw, 21px);
   line-height: 1.15;
+  text-align: center;
+}
+
+@media (max-width: 1056px) {
+  .cafe-offer-inner {
+    width: min(100% - 64px, 780px);
+  }
+
+  .cafe-offer-grid {
+    grid-template-columns: repeat(2, minmax(0, 315px));
+  }
 }
 
 .cafe-menu {
@@ -1833,7 +1850,7 @@ input:focus-visible {
   }
 
   .cafe-offer-grid {
-    grid-template-columns: repeat(3, minmax(0, 220px));
+    grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
   .cafe-menu-frame {
@@ -1888,28 +1905,8 @@ input:focus-visible {
   }
 
   .cafe-offer-grid {
-    grid-template-columns: 1fr;
+    grid-template-columns: minmax(0, 1fr);
     gap: 14px;
-  }
-
-  .cafe-offer-card {
-    display: grid;
-    grid-template-columns: 100px 1fr;
-    align-items: center;
-    gap: 16px;
-    min-height: 0;
-    padding: 12px;
-    border-radius: 26px;
-  }
-
-  .cafe-offer-card img {
-    aspect-ratio: 1;
-    border-radius: 18px;
-  }
-
-  .cafe-offer-card h3 {
-    margin: 0;
-    font-size: 16px;
   }
 
   .cafe-menu {
