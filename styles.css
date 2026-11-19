@@ -1976,15 +1976,15 @@ input:focus-visible {
 
 .contact-detail {
   display: grid;
-  grid-template-columns: 30px minmax(0, 1fr);
+  grid-template-columns: 32px minmax(0, 1fr);
   align-items: start;
   gap: 16px;
   color: var(--burgundy);
 }
 
 .contact-icon {
-  width: 30px;
-  height: 30px;
+  width: 32px;
+  height: 32px;
 }
 
 .contact-detail h2,
@@ -2115,11 +2115,6 @@ input:focus-visible {
   cursor: pointer;
 }
 
-.page-kontakt .site-footer {
-  width: min(100% - 96px, 1200px);
-  margin-inline: auto;
-}
-
 @media (max-width: 760px) {
   .contact-location {
     min-height: 0;
@@ -2157,9 +2152,6 @@ input:focus-visible {
     padding-inline: 42px;
   }
 
-  .page-kontakt .site-footer {
-    width: min(100% - 48px, 1200px);
-  }
 }
 
 @media (max-width: 560px) {
@@ -2227,7 +2219,4 @@ input:focus-visible {
     margin-top: 24px;
   }
 
-  .page-kontakt .site-footer {
-    width: min(100% - 32px, 440px);
-  }
 }
