@@ -1621,3 +1621,293 @@ input:focus-visible {
     transition-duration: 0.01ms !important;
   }
 }
+
+.cafe-intro {
+  display: grid;
+  min-height: clamp(375px, 41.2vw, 550px);
+  align-items: center;
+}
+
+.cafe-intro-inner {
+  display: grid;
+  width: min(100% - 64px, 1000px);
+  grid-template-columns: 1fr 0.85fr;
+  align-items: center;
+  gap: clamp(42px, 7vw, 84px);
+  margin-inline: auto;
+  padding-block: 36px;
+}
+
+.cafe-intro-copy {
+  padding-left: clamp(0px, 1.2vw, 14px);
+}
+
+.cafe-intro h1 {
+  margin: 0 0 14px;
+  font-family: var(--sans);
+  font-size: clamp(24px, 2.67vw, 32px);
+  line-height: 1.2;
+}
+
+.cafe-intro p {
+  max-width: 470px;
+  margin: 0 0 46px;
+  font-size: clamp(14px, 1.56vw, 19px);
+  line-height: 1.3;
+}
+
+.cafe-intro .button {
+  min-width: clamp(162px, 18vw, 216px);
+}
+
+.cafe-intro-image {
+  display: block;
+  width: min(100%, clamp(250px, 30vw, 360px));
+  aspect-ratio: 1;
+  justify-self: center;
+  transform: rotate(8deg);
+  border-radius: 30px;
+  object-fit: cover;
+}
+
+.cafe-offer {
+  min-height: clamp(375px, 41.2vw, 550px);
+  margin-inline: 5px;
+  padding: clamp(18px, 2.2vw, 26px) 0;
+  background: var(--yellow);
+}
+
+.cafe-offer-inner {
+  width: min(100% - 64px, 760px);
+  margin-inline: auto;
+}
+
+.cafe-offer h2 {
+  margin: 0 0 clamp(18px, 2.2vw, 26px);
+  font-family: var(--sans);
+  font-size: clamp(22px, 2.45vw, 29px);
+  text-align: center;
+}
+
+.cafe-offer-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: clamp(14px, 1.8vw, 20px);
+}
+
+.cafe-offer-card {
+  min-width: 0;
+  padding: clamp(12px, 1.45vw, 16px);
+  border-radius: clamp(28px, 3.4vw, 40px);
+  background: var(--card);
+}
+
+.cafe-offer-card img {
+  display: block;
+  width: 100%;
+  aspect-ratio: 1.24;
+  border-radius: clamp(22px, 2.7vw, 32px);
+  object-fit: cover;
+}
+
+.cafe-offer-card h3 {
+  margin: clamp(14px, 1.7vw, 20px) 4px 0;
+  font-family: var(--sans);
+  font-size: clamp(16px, 1.78vw, 21px);
+  line-height: 1.15;
+}
+
+.cafe-menu {
+  display: grid;
+  min-height: 460px;
+  place-items: center;
+  padding-block: 10px 24px;
+}
+
+.cafe-menu-frame {
+  position: relative;
+  display: grid;
+  width: min(100% - 64px, 1000px);
+  aspect-ratio: 2.05;
+  place-items: center;
+  padding: 28px 0;
+}
+
+.cafe-menu-frame-image {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: fill;
+}
+
+.cafe-menu-card {
+  position: relative;
+  z-index: 1;
+  width: 84%;
+  min-height: 69%;
+  padding: clamp(16px, 2vw, 24px) clamp(24px, 4vw, 44px);
+  border-radius: 7px;
+  background: var(--cream);
+}
+
+.cafe-menu-card h2 {
+  margin: 0 0 clamp(18px, 2.4vw, 28px);
+  font-size: clamp(25px, 3vw, 35px);
+  text-align: center;
+}
+
+.cafe-menu-columns {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1.2fr;
+  gap: clamp(18px, 3.5vw, 42px);
+}
+
+.cafe-menu-category h3 {
+  margin: 0 0 12px;
+  font-family: var(--sans);
+  font-size: clamp(16px, 1.98vw, 20px);
+  line-height: 1.2;
+}
+
+.cafe-menu-category ul {
+  display: grid;
+  gap: 5px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.cafe-menu-category li,
+.cafe-menu-category p {
+  margin: 0;
+  font-size: clamp(12px, 1.45vw, 16px);
+  font-weight: 700;
+  line-height: 1.25;
+}
+
+.cafe-menu-category li {
+  display: flex;
+  justify-content: space-between;
+  gap: 8px;
+}
+
+@media (max-width: 760px) {
+  .cafe-intro-inner {
+    width: min(100% - 40px, 620px);
+    gap: 28px;
+  }
+
+  .cafe-offer-inner {
+    width: min(100% - 40px, 620px);
+  }
+
+  .cafe-menu-frame {
+    width: min(100% - 40px, 700px);
+  }
+
+  .cafe-menu-card {
+    width: 86%;
+    padding-inline: 22px;
+  }
+}
+
+@media (max-width: 560px) {
+  .cafe-intro {
+    min-height: 0;
+  }
+
+  .cafe-intro-inner {
+    grid-template-columns: 1fr;
+    gap: 30px;
+    padding-block: 42px 54px;
+  }
+
+  .cafe-intro-copy {
+    padding-left: 0;
+  }
+
+  .cafe-intro h1 {
+    font-size: 25px;
+  }
+
+  .cafe-intro p {
+    margin-bottom: 24px;
+  }
+
+  .cafe-intro-image {
+    width: min(72vw, 300px);
+  }
+
+  .cafe-offer {
+    min-height: 0;
+    padding-block: 28px 32px;
+  }
+
+  .cafe-offer-inner {
+    width: min(100% - 28px, 440px);
+  }
+
+  .cafe-offer h2 {
+    margin-bottom: 22px;
+    font-size: 23px;
+  }
+
+  .cafe-offer-grid {
+    grid-template-columns: 1fr;
+    gap: 14px;
+  }
+
+  .cafe-offer-card {
+    display: grid;
+    grid-template-columns: 100px 1fr;
+    align-items: center;
+    gap: 16px;
+    padding: 12px;
+    border-radius: 26px;
+  }
+
+  .cafe-offer-card img {
+    aspect-ratio: 1;
+    border-radius: 18px;
+  }
+
+  .cafe-offer-card h3 {
+    margin: 0;
+    font-size: 16px;
+  }
+
+  .cafe-menu {
+    min-height: 0;
+    padding-block: 24px;
+  }
+
+  .cafe-menu-frame {
+    width: calc(100% - 20px);
+    aspect-ratio: auto;
+    padding-block: 42px;
+  }
+
+  .cafe-menu-card {
+    width: 84%;
+    padding: 22px 18px;
+  }
+
+  .cafe-menu-card h2 {
+    margin-bottom: 22px;
+  }
+
+  .cafe-menu-columns {
+    grid-template-columns: 1fr;
+    gap: 22px;
+  }
+
+  .cafe-menu-category h3 {
+    font-size: 16px;
+  }
+
+  .cafe-menu-category li,
+  .cafe-menu-category p {
+    font-size: 14px;
+  }
+}
