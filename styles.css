@@ -1062,19 +1062,37 @@ input:focus-visible {
   }
 
   .steps-grid {
-    grid-template-columns: repeat(2, 230px);
-    gap: 20px;
+    grid-template-columns: minmax(0, 1fr);
+    gap: 12px;
   }
 
   .step-card {
-    min-height: 240px;
-    border-radius: 42px;
+    width: 100%;
+    height: auto;
+    min-height: 82px;
+    flex-direction: row;
+    justify-content: flex-start;
+    gap: 18px;
+    padding: 16px 22px;
+    border-radius: 20px;
+    text-align: left;
   }
 
   .step-number {
-    width: 44px;
-    margin-bottom: 24px;
+    width: 42px;
+    flex: 0 0 42px;
+    margin-bottom: 0;
     font-size: 18px;
+  }
+
+  .step-card h3 {
+    display: block;
+    width: auto;
+    min-height: 0;
+  }
+
+  .step-card h3 br {
+    display: none;
   }
 
   .craft-options {
@@ -1318,20 +1336,21 @@ input:focus-visible {
   }
 
   .steps-grid {
-    grid-template-columns: 230px;
-    gap: 12px;
+    grid-template-columns: minmax(0, 1fr);
+    gap: 10px;
   }
 
   .step-card {
-    min-height: 190px;
-    padding: 20px 10px;
-    border-radius: 30px;
+    min-height: 72px;
+    gap: 14px;
+    padding: 12px 16px;
+    border-radius: 18px;
   }
 
   .step-number {
-    width: 40px;
-    margin-bottom: 18px;
-    font-size: 17px;
+    width: 38px;
+    flex-basis: 38px;
+    font-size: 16px;
   }
 
   .step-card h3 {
