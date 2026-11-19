@@ -1909,6 +1909,28 @@ input:focus-visible {
     gap: 14px;
   }
 
+  .cafe-offer-card {
+    display: grid;
+    grid-template-columns: 100px minmax(0, 1fr);
+    align-items: center;
+    gap: 16px;
+    height: auto;
+    min-height: 124px;
+    padding: 12px;
+    border-radius: 26px;
+  }
+
+  .cafe-offer-card img {
+    aspect-ratio: 1;
+    border-radius: 18px;
+  }
+
+  .cafe-offer-card h3 {
+    margin: 0;
+    font-size: 16px;
+    text-align: left;
+  }
+
   .cafe-menu {
     min-height: 0;
     padding-block: 24px;
