@@ -50,6 +50,10 @@ Bordová a krémová tvoria základ kontrastu. Žltá odlišuje ponuku, ružová
 
 Obsahové sekcie majú priestranné odsadenie. Fotografie sú prirodzené a teplé, zobrazujú skutočný priestor, tvorenie alebo občerstvenie; používajú sa bez dekoratívnych papierových rámov.
 
+## Podstránka Kontakt
+
+Stránka zachováva spoločnú bordovú hlavičku a pätičku. Pod hlavičkou je jemný kvetinový pás, potom kontaktné údaje vedľa mapy a rezervačný formulár na púdrovo-ružovom podklade. Polia formulára sú svetlé, zaoblené a používajú rovnakú typografiu a farby ako zvyšok webu. Na užších obrazovkách sa kontaktné údaje a mapa aj polia formulára usporiadajú do jedného stĺpca.
+
 ## Responzívne správanie
 
 - Pri šírke do 1100 px sa karty ponuky zobrazia v dvoch stĺpcoch.
