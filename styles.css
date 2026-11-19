@@ -2059,6 +2059,75 @@ input:focus-visible {
   font-weight: 700;
 }
 
+.reservation-field[hidden] {
+  display: none;
+}
+
+.reservation-time-note {
+  font-size: 11px;
+  font-weight: 400;
+}
+
+.reservation-error {
+  color: #a00024;
+  font-size: 11px;
+  font-weight: 400;
+}
+
+.reservation-error:empty {
+  display: none;
+}
+
+.reservation-field input[aria-invalid="true"],
+.reservation-field select[aria-invalid="true"],
+.reservation-field textarea[aria-invalid="true"] {
+  outline: 2px solid #a00024;
+  outline-offset: 1px;
+}
+
+.workshop-attendees {
+  gap: 12px;
+}
+
+.workshop-attendee-note {
+  margin: 0;
+  font-size: 12px;
+  font-weight: 400;
+}
+
+.workshop-attendee-list {
+  display: grid;
+  gap: 12px;
+}
+
+.workshop-attendee-row {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 110px;
+  align-items: start;
+  gap: 12px;
+}
+
+.workshop-attendee-remove {
+  min-width: 0;
+  min-height: 34px;
+  margin-top: 21px;
+  padding: 8px 12px;
+  font-size: 11px;
+}
+
+.workshop-attendee-add {
+  justify-self: start;
+  min-width: 190px;
+  min-height: 38px;
+  padding: 8px 18px;
+  font-size: 12px;
+}
+
+.workshop-attendee-add:disabled {
+  cursor: not-allowed;
+  opacity: 0.55;
+}
+
 .reservation-field input,
 .reservation-field select,
 .reservation-field textarea {

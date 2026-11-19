@@ -94,48 +94,78 @@
           <div class="reservation-column">
             <label class="reservation-field" for="reservation-name">
               <span>Meno a priezvisko</span>
-              <input id="reservation-name" name="Meno a priezvisko" type="text" placeholder="napr. Jana Kováčová" autocomplete="name" required>
+              <input id="reservation-name" name="Meno a priezvisko" type="text" placeholder="napr. Jana Kováčová" autocomplete="name" data-validation="person-name" aria-describedby="reservation-name-error" required>
+              <span class="reservation-error" id="reservation-name-error" aria-live="polite"></span>
             </label>
             <label class="reservation-field" for="reservation-email">
               <span>E-mail</span>
-              <input id="reservation-email" name="E-mail" type="email" placeholder="napr. jana.kovacova@gmail.com" autocomplete="email" required>
+              <input id="reservation-email" name="E-mail" type="email" placeholder="napr. jana.kovacova@gmail.com" autocomplete="email" aria-describedby="reservation-email-error" required>
+              <span class="reservation-error" id="reservation-email-error" aria-live="polite"></span>
             </label>
             <label class="reservation-field" for="reservation-phone">
               <span>Telefónne číslo</span>
-              <input id="reservation-phone" name="Telefónne číslo" type="tel" placeholder="napr. +421 978 434 556" autocomplete="tel" required>
+              <input id="reservation-phone" name="Telefónne číslo" type="tel" placeholder="napr. +421 978 434 556" autocomplete="tel" data-validation="phone" aria-describedby="reservation-phone-error" required>
+              <span class="reservation-error" id="reservation-phone-error" aria-live="polite"></span>
             </label>
             <label class="reservation-field" for="reservation-type">
               <span>Typ rezervácie</span>
-              <select id="reservation-type" name="Typ rezervácie" required>
+              <select id="reservation-type" name="Typ rezervácie" aria-describedby="reservation-type-error" required>
                 <option value="" selected disabled>Vyberte si aktivitu pre ktorú robíte rezerváciu</option>
-                <option>Voľné tvorenie</option>
-                <option>Skupinové tvorenie</option>
-                <option>Workshop s lektorom</option>
+                <option value="Voľné tvorenie">Voľné tvorenie</option>
+                <option value="Skupinové tvorenie">Skupinové tvorenie</option>
+                <option value="Workshop s lektorom">Workshop s lektorom</option>
               </select>
+              <span class="reservation-error" id="reservation-type-error" aria-live="polite"></span>
             </label>
           </div>
 
           <div class="reservation-column">
+            <label class="reservation-field" for="reservation-workshop" hidden>
+              <span>Vyberte workshop</span>
+              <select id="reservation-workshop" name="Workshop" aria-describedby="reservation-workshop-error" disabled>
+                <option value="" selected disabled>Vyberte si workshop z aktuálnej ponuky</option>
+                <option value="Kvetinové vence" data-id="kvetinove-vence" data-date="2027-01-13" data-time="18:00 - 19:00">Kvetinové vence</option>
+                <option value="Maľovanie na hrnčeky &amp; Latte Art" data-id="malovanie-na-hrnceky-latte-art" data-date="2027-01-18" data-time="17:30 - 19:30">Maľovanie na hrnčeky &amp; Latte Art</option>
+                <option value="Tvorba vonných sviečok zo sójového vosku" data-id="tvorba-vonnych-sviecok" data-date="2027-01-24" data-time="18:00 - 19:30">Tvorba vonných sviečok zo sójového vosku</option>
+                <option value="Akvarelové maľovanie pri šálke čaju alebo kávy" data-id="akvarelove-malovanie" data-date="2027-01-27" data-time="17:00 - 19:00">Akvarelové maľovanie pri šálke čaju alebo kávy</option>
+                <option value="Výroba macramé závesov na kvetináče" data-id="vyroba-macrame-zavesov" data-date="2027-02-02" data-time="17:30 - 19:30">Výroba macramé závesov na kvetináče</option>
+              </select>
+              <span class="reservation-error" id="reservation-workshop-error" aria-live="polite"></span>
+            </label>
             <label class="reservation-field" for="reservation-guests">
               <span>Počet osôb</span>
-              <select id="reservation-guests" name="Počet osôb" required>
+              <select id="reservation-guests" name="Počet osôb" aria-describedby="reservation-guests-error" required>
                 <option value="" selected disabled>napr. 6</option>
-                <option>1</option><option>2</option><option>3</option><option>4</option><option>5</option>
-                <option>6</option><option>7</option><option>8</option><option>9</option><option>10</option>
-                <option>11</option><option>12</option><option>13</option><option>14</option><option>15</option>
-                <option>16</option><option>17</option><option>18</option><option>19</option><option>20</option>
+                <option value="1">1</option><option value="2">2</option><option value="3">3</option><option value="4">4</option><option value="5">5</option>
+                <option value="6">6</option><option value="7">7</option><option value="8">8</option><option value="9">9</option><option value="10">10</option>
+                <option value="11">11</option><option value="12">12</option><option value="13">13</option><option value="14">14</option><option value="15">15</option>
+                <option value="16">16</option><option value="17">17</option><option value="18">18</option><option value="19">19</option><option value="20">20</option>
               </select>
+              <span class="reservation-error" id="reservation-guests-error" aria-live="polite"></span>
             </label>
             <label class="reservation-field" for="reservation-date">
               <span>Dátum</span>
-              <input id="reservation-date" name="Dátum" type="date" required>
+              <input id="reservation-date" name="Dátum" type="date" aria-describedby="reservation-date-error" required>
+              <span class="reservation-error" id="reservation-date-error" aria-live="polite"></span>
             </label>
             <label class="reservation-field" for="reservation-time">
               <span>Čas</span>
-              <input id="reservation-time" name="Čas" type="time" required>
+              <input id="reservation-time" name="Čas" type="time" aria-describedby="reservation-time-error" required>
+              <span class="reservation-time-note" hidden>Čas workshopu je pevne stanovený.</span>
+              <span class="reservation-error" id="reservation-time-error" aria-live="polite"></span>
             </label>
           </div>
 
+          <div class="reservation-field reservation-note workshop-attendees" id="workshop-attendees" hidden>
+            <p class="workshop-attendee-note">Každý účastník musí byť uvedený samostatne. Prihlasujúca osoba sa počíta ako prvá; pridajte meno každého ďalšieho účastníka. Kontaktné údaje sa zdieľajú s hlavnou registráciou.</p>
+            <div class="workshop-attendee-list" id="workshop-attendee-list"></div>
+            <button class="button button-secondary workshop-attendee-add" id="workshop-attendee-add" type="button">Pridať ďalšiu osobu</button>
+          </div>
+
+          <label class="reservation-field reservation-note" for="reservation-group-details" hidden>
+            <span>Ide o oslavu alebo máte špeciálnu požiadavku?</span>
+            <textarea id="reservation-group-details" name="Oslava alebo špeciálna požiadavka" placeholder="Napr. narodeninová oslava, teambuilding alebo špeciálne usporiadanie stola..." disabled></textarea>
+          </label>
           <label class="reservation-field reservation-note" for="reservation-note">
             <span>Poznámka</span>
             <textarea id="reservation-note" name="Poznámka" placeholder="Ak máte špeciálny nápad alebo požiadavku, napíšte nám ju sem..."></textarea>
