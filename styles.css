@@ -533,6 +533,209 @@ input:focus-visible {
   width: min(100% - 64px, 1200px);
 }
 
+.page-workshopy .workshop-hero {
+  display: flex;
+  min-height: clamp(320px, 37.5vw, 450px);
+  align-items: center;
+  background:
+    linear-gradient(90deg, rgb(0 0 0 / 70%) 0%, rgb(0 0 0 / 38%) 48%, rgb(0 0 0 / 8%) 100%),
+    url("img/workshopy_hero.jpg") center 52% / cover no-repeat;
+}
+
+.workshop-hero-inner {
+  width: min(100% - 64px, 1200px);
+  margin-inline: auto;
+  padding-block: 36px;
+}
+
+.workshop-hero h1 {
+  margin: 0 0 20px;
+  color: white;
+  font-family: var(--sans);
+  font-size: clamp(34px, 4vw, 48px);
+  font-weight: 700;
+  line-height: 1.1;
+  text-shadow: 0 1px 3px rgb(40 27 19 / 60%);
+}
+
+.workshop-hero p {
+  margin: 0;
+  color: white;
+  font-size: clamp(15px, 1.56vw, 19px);
+  font-weight: 700;
+  text-transform: uppercase;
+  text-shadow: 0 1px 3px rgb(40 27 19 / 70%);
+}
+
+.workshop-intro {
+  display: flex;
+  min-height: 325px;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 38px 24px 44px;
+  text-align: center;
+}
+
+.workshop-intro h2,
+.workshop-gallery h2 {
+  margin: 0 0 18px;
+  font-family: var(--sans);
+  font-size: clamp(25px, 2.67vw, 32px);
+  line-height: 1.2;
+}
+
+.workshop-intro p {
+  margin: 0 0 14px;
+  font-size: clamp(14px, 1.56vw, 18px);
+  font-weight: 700;
+  line-height: 1.3;
+}
+
+.workshop-intro .workshop-intro-prompt {
+  margin-bottom: 24px;
+}
+
+.workshop-included {
+  display: flex;
+  min-height: 86px;
+  align-items: center;
+  gap: 14px;
+  padding: 14px 22px;
+  border: 2px solid var(--burgundy);
+  border-radius: 20px;
+  color: var(--burgundy);
+  text-align: left;
+}
+
+.workshop-included svg {
+  width: 40px;
+  height: 40px;
+  flex: 0 0 40px;
+}
+
+.workshop-included span {
+  font-size: clamp(14px, 1.45vw, 17px);
+  line-height: 1.2;
+}
+
+.workshop-schedule {
+  margin: 0 clamp(3px, 0.35vw, 8px);
+  padding: 26px clamp(32px, 4.8vw, 58px) 50px;
+  background: var(--yellow);
+}
+
+.workshop-schedule-inner {
+  width: min(100%, 1120px);
+  margin-inline: auto;
+}
+
+.workshop-schedule h2 {
+  margin: 0 0 27px;
+  font-family: var(--sans);
+  font-size: clamp(23px, 2.45vw, 29px);
+  line-height: 1.2;
+}
+
+.workshop-list {
+  display: grid;
+  gap: 20px;
+}
+
+.workshop-card {
+  display: grid;
+  min-height: 163px;
+  grid-template-columns: minmax(150px, 0.82fr) minmax(0, 2fr) minmax(130px, 0.78fr);
+  align-items: center;
+  gap: clamp(20px, 3.3vw, 40px);
+  padding: 18px clamp(22px, 3.8vw, 46px);
+  border-radius: 38px;
+  background: var(--card);
+}
+
+.workshop-date {
+  display: grid;
+  justify-items: center;
+  gap: 7px;
+  color: var(--burgundy);
+  text-align: center;
+}
+
+.workshop-date svg {
+  width: 36px;
+  height: 36px;
+}
+
+.workshop-date strong {
+  font-size: clamp(20px, 2.34vw, 28px);
+  line-height: 1.1;
+}
+
+.workshop-date span {
+  color: var(--text);
+  font-size: clamp(12px, 1.34vw, 16px);
+  font-weight: 700;
+  white-space: nowrap;
+}
+
+.workshop-details h3 {
+  margin: 0 0 5px;
+  font-family: var(--sans);
+  font-size: clamp(17px, 1.9vw, 23px);
+  line-height: 1.15;
+}
+
+.workshop-details p {
+  margin: 0 0 7px;
+  font-size: clamp(12px, 1.34vw, 15px);
+  line-height: 1.2;
+}
+
+.workshop-details .workshop-price {
+  margin-bottom: 12px;
+}
+
+.workshop-button {
+  min-width: 150px;
+  min-height: 30px;
+  padding: 6px 20px;
+  font-size: 12px;
+}
+
+.workshop-card-image {
+  display: block;
+  width: 100%;
+  max-width: 156px;
+  aspect-ratio: 1.25;
+  justify-self: end;
+  border-radius: 24px;
+  object-fit: cover;
+}
+
+.workshop-gallery {
+  padding: 60px clamp(24px, 3.2vw, 38px) 94px;
+  text-align: center;
+}
+
+.workshop-gallery h2 {
+  margin-bottom: 38px;
+}
+
+.workshop-gallery-grid {
+  display: grid;
+  width: min(100%, 1200px);
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: clamp(18px, 3vw, 36px);
+  margin-inline: auto;
+}
+
+.workshop-gallery-grid img {
+  display: block;
+  width: 100%;
+  aspect-ratio: 1;
+  object-fit: cover;
+}
+
 .creation-intro {
   width: 100%;
   min-height: 500px;
@@ -802,6 +1005,25 @@ input:focus-visible {
     width: min(100% - 32px, 728px);
   }
 
+  .workshop-card {
+    grid-template-columns: minmax(130px, 0.8fr) minmax(0, 2fr) minmax(110px, 0.75fr);
+    gap: 18px;
+    padding-inline: 24px;
+  }
+
+  .workshop-date span {
+    white-space: normal;
+  }
+
+  .workshop-card-image {
+    max-width: 132px;
+  }
+
+  .workshop-gallery-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 18px;
+  }
+
   .creation-intro {
     min-height: 500px;
     padding-block: 54px;
@@ -940,6 +1162,120 @@ input:focus-visible {
 }
 
 @media (max-width: 560px) {
+  .page-workshopy .workshop-hero {
+    min-height: 350px;
+    background-position: 55% center;
+  }
+
+  .workshop-hero-inner {
+    width: min(100% - 40px, 440px);
+  }
+
+  .workshop-hero h1 {
+    font-size: 34px;
+  }
+
+  .workshop-intro {
+    min-height: 0;
+    padding: 38px 20px 42px;
+  }
+
+  .workshop-intro h2 {
+    margin-bottom: 16px;
+  }
+
+  .workshop-intro p {
+    font-size: 15px;
+  }
+
+  .workshop-intro .workshop-intro-prompt {
+    margin-bottom: 20px;
+  }
+
+  .workshop-included {
+    min-height: 76px;
+    gap: 10px;
+    padding: 12px 14px;
+    border-radius: 18px;
+  }
+
+  .workshop-included svg {
+    width: 34px;
+    height: 34px;
+    flex-basis: 34px;
+  }
+
+  .workshop-included span {
+    font-size: 13px;
+  }
+
+  .workshop-schedule {
+    padding: 28px 14px 38px;
+  }
+
+  .workshop-schedule h2 {
+    margin-bottom: 20px;
+    font-size: 23px;
+  }
+
+  .workshop-list {
+    gap: 14px;
+  }
+
+  .workshop-card {
+    grid-template-columns: 90px minmax(0, 1fr);
+    gap: 12px;
+    min-height: 0;
+    padding: 18px 14px;
+    border-radius: 26px;
+  }
+
+  .workshop-date {
+    gap: 6px;
+  }
+
+  .workshop-date svg {
+    width: 30px;
+    height: 30px;
+  }
+
+  .workshop-date strong {
+    font-size: 18px;
+  }
+
+  .workshop-date span {
+    font-size: 11px;
+  }
+
+  .workshop-details h3 {
+    font-size: 17px;
+  }
+
+  .workshop-details p {
+    font-size: 12px;
+  }
+
+  .workshop-button {
+    min-width: 132px;
+  }
+
+  .workshop-card-image {
+    display: none;
+  }
+
+  .workshop-gallery {
+    padding: 42px 18px 58px;
+  }
+
+  .workshop-gallery h2 {
+    margin-bottom: 24px;
+    font-size: 22px;
+  }
+
+  .workshop-gallery-grid {
+    gap: 12px;
+  }
+
   .creation-intro {
     padding-block: 42px 54px;
   }
