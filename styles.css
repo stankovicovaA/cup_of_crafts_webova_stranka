@@ -758,17 +758,18 @@ input:focus-visible {
 }
 
 .creation-intro {
+  display: grid;
   width: 100%;
-  min-height: 500px;
-  padding-block: 70px;
+  min-height: clamp(375px, 41.2vw, 550px);
+  align-items: center;
 }
 
 .creation-intro-inner {
   display: grid;
-  min-height: 360px;
   grid-template-columns: 1fr 0.9fr;
   align-items: center;
   gap: clamp(60px, 8vw, 120px);
+  padding-block: 36px;
 }
 
 .creation-intro-copy {
@@ -790,7 +791,7 @@ input:focus-visible {
 
 .creation-intro-image {
   display: block;
-  width: min(100%, 400px);
+  width: min(100%, clamp(250px, 30vw, 360px));
   aspect-ratio: 1;
   justify-self: center;
   transform: rotate(7deg);
@@ -1046,12 +1047,10 @@ input:focus-visible {
   }
 
   .creation-intro {
-    min-height: 500px;
-    padding-block: 54px;
+    min-height: clamp(375px, 41.2vw, 550px);
   }
 
   .creation-intro-inner {
-    min-height: 392px;
     grid-template-columns: 1fr 0.8fr;
     gap: 28px;
   }
@@ -1322,12 +1321,13 @@ input:focus-visible {
   }
 
   .creation-intro {
-    padding-block: 42px 54px;
+    min-height: 0;
   }
 
   .creation-intro-inner {
     grid-template-columns: 1fr;
-    gap: 36px;
+    gap: 30px;
+    padding-block: 42px 54px;
   }
 
   .creation-intro h1 {
@@ -1341,7 +1341,7 @@ input:focus-visible {
   }
 
   .creation-intro-image {
-    width: min(78vw, 330px);
+    width: min(72vw, 300px);
   }
 
   .creation-steps {
@@ -1670,11 +1670,9 @@ input:focus-visible {
 
 .cafe-intro-inner {
   display: grid;
-  width: min(100% - 64px, 1000px);
   grid-template-columns: 1fr 0.85fr;
   align-items: center;
   gap: clamp(42px, 7vw, 84px);
-  margin-inline: auto;
   padding-block: 36px;
 }
 
@@ -1715,11 +1713,6 @@ input:focus-visible {
   margin-inline: 5px;
   padding: clamp(24px, 2.5vw, 30px) 0;
   background: var(--yellow);
-}
-
-.cafe-offer-inner {
-  width: min(100% - 64px, 1020px);
-  margin-inline: auto;
 }
 
 .cafe-offer h2 {
@@ -1767,10 +1760,6 @@ input:focus-visible {
 }
 
 @media (max-width: 1056px) {
-  .cafe-offer-inner {
-    width: min(100% - 64px, 780px);
-  }
-
   .cafe-offer-grid {
     grid-template-columns: repeat(2, minmax(0, 315px));
   }
@@ -1786,7 +1775,6 @@ input:focus-visible {
 .cafe-menu-frame {
   position: relative;
   display: grid;
-  width: min(100% - 64px, 1000px);
   aspect-ratio: 2.05;
   place-items: center;
   padding: 28px 0;
@@ -1862,20 +1850,11 @@ input:focus-visible {
 
 @media (max-width: 760px) {
   .cafe-intro-inner {
-    width: min(100% - 40px, 620px);
     gap: 28px;
-  }
-
-  .cafe-offer-inner {
-    width: min(100% - 40px, 620px);
   }
 
   .cafe-offer-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
-  }
-
-  .cafe-menu-frame {
-    width: min(100% - 40px, 700px);
   }
 
   .cafe-menu-card {
@@ -1916,10 +1895,6 @@ input:focus-visible {
     padding-block: 28px 32px;
   }
 
-  .cafe-offer-inner {
-    width: min(100% - 28px, 440px);
-  }
-
   .cafe-offer h2 {
     margin-bottom: 22px;
     font-size: 23px;
@@ -1958,7 +1933,6 @@ input:focus-visible {
   }
 
   .cafe-menu-frame {
-    width: calc(100% - 20px);
     aspect-ratio: auto;
     padding-block: 42px;
   }
