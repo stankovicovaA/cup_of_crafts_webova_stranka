@@ -427,7 +427,7 @@ input:focus-visible {
 
 .cafe-image {
   margin-left: clamp(-16px, -1.33vw, -12px);
-  object-position: center 70%;
+  object-position: center 96%;
 }
 
 .site-footer {
