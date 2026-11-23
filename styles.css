@@ -1269,6 +1269,15 @@ input:focus-visible {
     border-radius: 26px;
   }
 
+  .workshop-card-image {
+    grid-column: 1 / -1;
+    width: 100%;
+    max-width: none;
+    height: 180px;
+    justify-self: stretch;
+    border-radius: 18px;
+  }
+
   .workshop-date {
     gap: 6px;
   }
@@ -1297,10 +1306,6 @@ input:focus-visible {
 
   .workshop-button {
     min-width: 132px;
-  }
-
-  .workshop-card-image {
-    display: none;
   }
 
   .workshop-gallery {
