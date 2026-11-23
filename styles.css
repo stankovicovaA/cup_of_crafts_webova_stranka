@@ -754,6 +754,10 @@ input:focus-visible {
   object-fit: cover;
 }
 
+.workshop-gallery-grid .workshop-gallery-cup {
+  object-position: center 100%;
+}
+
 .creation-intro {
   width: 100%;
   min-height: 500px;
