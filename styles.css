@@ -535,11 +535,11 @@ input:focus-visible {
 
 .page-workshopy .workshop-hero {
   display: flex;
-  min-height: 500px;
+  height: 550px;
   align-items: center;
   background:
     linear-gradient(90deg, rgb(0 0 0 / 70%) 0%, rgb(0 0 0 / 38%) 48%, rgb(0 0 0 / 8%) 100%),
-    url("img/workshopy_hero.jpg") center 52% / cover no-repeat;
+    url("img/workshopy_hero_foto.jpg") center 35% / cover no-repeat;
 }
 
 .workshop-hero-inner {
@@ -669,11 +669,10 @@ input:focus-visible {
 
 .workshop-date strong {
   font-size: clamp(20px, 2.34vw, 28px);
-  line-height: 1.1;
 }
 
 .workshop-date span {
-  color: var(--text);
+  margin-top: 8px;
   font-size: clamp(12px, 1.34vw, 16px);
   font-weight: 700;
   white-space: nowrap;
@@ -1203,8 +1202,8 @@ input:focus-visible {
 
 @media (max-width: 560px) {
   .page-workshopy .workshop-hero {
-    min-height: 500px;
-    background-position: 55% center;
+    height: 550px;
+    background-position: 55% 35%;
   }
 
   .workshop-hero-inner {
@@ -1284,6 +1283,7 @@ input:focus-visible {
   }
 
   .workshop-date span {
+    margin-top: 6px;
     font-size: 11px;
   }
 
