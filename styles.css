@@ -530,8 +530,7 @@ input:focus-visible {
   text-decoration: none;
 }
 
-.footer-contact a:hover,
-.footer-nav a:hover {
+.footer-contact a:hover {
   text-decoration: underline;
 }
 
@@ -544,6 +543,12 @@ input:focus-visible {
   color: white;
   font-size: clamp(15px, 1.67vw, 20px);
   font-weight: 700;
+  text-decoration: none;
+}
+
+.footer-nav a:hover,
+.footer-nav a:focus-visible {
+  color: var(--pink);
   text-decoration: none;
 }
 
