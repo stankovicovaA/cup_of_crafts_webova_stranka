@@ -814,7 +814,7 @@ input:focus-visible {
   aspect-ratio: 1;
   justify-self: center;
   transform: rotate(7deg);
-  border-radius: 58px;
+  border-radius: 30px;
 }
 
 .creation-steps {
