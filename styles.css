@@ -978,12 +978,13 @@ input:focus-visible {
   padding: 28px 0;
 }
 
-.pricing-frame-image {
+.pricing-frame-shape,
+.cafe-menu-frame-shape {
   position: absolute;
   inset: 0;
   width: 100%;
   height: 100%;
-  object-fit: fill;
+  pointer-events: none;
 }
 
 .pricing-card {
@@ -1440,15 +1441,15 @@ input:focus-visible {
   }
 
   .creation-pricing {
-    min-height: 500px;
+    min-height: 0;
     margin-bottom: 20px;
   }
 
   .pricing-frame {
     width: calc(100% - 20px);
     aspect-ratio: auto;
-    min-height: 350px;
-    padding: 34px 0;
+    min-height: 0;
+    padding-block: 42px;
   }
 
   .pricing-card {
@@ -1820,14 +1821,6 @@ input:focus-visible {
   object-fit: fill;
 }
 
-.cafe-menu-frame-shape {
-  position: absolute;
-  inset: 0;
-  width: 100%;
-  height: 100%;
-  pointer-events: none;
-}
-
 .cafe-menu-card {
   position: relative;
   z-index: 1;
@@ -1964,9 +1957,14 @@ input:focus-visible {
     padding-block: 24px;
   }
 
+  .pricing-frame,
   .cafe-menu-frame {
     aspect-ratio: auto;
-    padding-block: 42px;
+    padding-block: clamp(24px, 8vw, 42px);
+  }
+
+  .cafe-menu-card {
+    min-height: 0;
   }
 
   .cafe-menu-card {
