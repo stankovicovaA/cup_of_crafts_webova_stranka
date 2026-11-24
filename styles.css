@@ -1701,7 +1701,7 @@ input:focus-visible {
 
 .cafe-intro h1 {
   margin: 0 0 14px;
-  font-family: var(--sans);
+  font-family: var(--serif);
   font-size: clamp(24px, 2.67vw, 32px);
   line-height: 1.2;
 }
@@ -1736,7 +1736,7 @@ input:focus-visible {
 
 .cafe-offer h2 {
   margin: 0 0 clamp(18px, 2.2vw, 26px);
-  font-family: var(--sans);
+  font-family: var(--serif);
   font-size: clamp(22px, 2.45vw, 29px);
   text-align: center;
 }
@@ -1772,7 +1772,7 @@ input:focus-visible {
 
 .cafe-offer-card h3 {
   margin: clamp(28px, 2.7vw, 34px) 4px 0;
-  font-family: var(--sans);
+  font-family: var(--serif);
   font-size: clamp(16px, 1.78vw, 21px);
   line-height: 1.15;
   text-align: center;
@@ -1840,7 +1840,7 @@ input:focus-visible {
 
 .cafe-menu-category h3 {
   margin: 0 0 12px;
-  font-family: var(--sans);
+  font-family: var(--serif);
   font-size: clamp(16px, 1.98vw, 20px);
   line-height: 1.2;
 }
