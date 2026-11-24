@@ -242,6 +242,12 @@ h3 {
   transform: translateY(-1px);
 }
 
+.button-primary:hover,
+.button-secondary:hover,
+.workshop-button:hover {
+  transform: translateY(-3px);
+}
+
 .button:focus-visible,
 a:focus-visible,
 button:focus-visible,
@@ -254,6 +260,7 @@ input:focus-visible {
 .button-secondary {
   background: var(--olive);
   color: white;
+  text-shadow: 0 1px 2px rgb(51 43 39 / 40%);
 }
 
 .intro {
@@ -727,6 +734,7 @@ input:focus-visible {
   background: var(--olive);
   color: white;
   font-size: 12px;
+  text-shadow: 0 1px 2px rgb(51 43 39 / 40%);
 }
 
 .workshop-card-image {
