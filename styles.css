@@ -569,7 +569,7 @@ input:focus-visible {
 .workshop-hero h1 {
   margin: 0 0 20px;
   color: white;
-  font-family: var(--sans);
+  font-family: var(--serif);
   font-size: clamp(34px, 4vw, 48px);
   font-weight: 700;
   line-height: 1.1;
@@ -579,9 +579,8 @@ input:focus-visible {
 .workshop-hero p {
   margin: 0;
   color: white;
-  font-size: clamp(15px, 1.56vw, 19px);
+  font-size: clamp(14px, 1.56vw, 19px);
   font-weight: 700;
-  text-transform: uppercase;
   text-shadow: 0 1px 3px rgb(40 27 19 / 70%);
 }
 
@@ -598,7 +597,7 @@ input:focus-visible {
 .workshop-intro h2,
 .workshop-gallery h2 {
   margin: 0 0 18px;
-  font-family: var(--sans);
+  font-family: var(--serif);
   font-size: clamp(25px, 2.67vw, 32px);
   line-height: 1.2;
 }
@@ -651,7 +650,7 @@ input:focus-visible {
 
 .workshop-schedule h2 {
   margin: 0 0 27px;
-  font-family: var(--sans);
+  font-family: var(--serif);
   font-size: clamp(23px, 2.45vw, 29px);
   line-height: 1.2;
 }
@@ -691,6 +690,7 @@ input:focus-visible {
 
 .workshop-date span {
   margin-top: 8px;
+  color: var(--text);
   font-size: clamp(12px, 1.34vw, 16px);
   font-weight: 700;
   white-space: nowrap;
@@ -698,7 +698,7 @@ input:focus-visible {
 
 .workshop-details h3 {
   margin: 0 0 10px;
-  font-family: var(--sans);
+  font-family: var(--serif);
   font-size: clamp(17px, 1.9vw, 23px);
   line-height: 1.15;
 }
@@ -711,7 +711,7 @@ input:focus-visible {
 
 .workshop-details .workshop-price {
   margin-bottom: 16px;
-  color: var(--burgundy);
+  color: var(--text);
   font-weight: 700;
 }
 
@@ -768,6 +768,7 @@ input:focus-visible {
   display: block;
   width: 100%;
   aspect-ratio: 1;
+  box-shadow: 0 4px 12px rgb(51 43 39 / 22%);
   object-fit: cover;
 }
 
