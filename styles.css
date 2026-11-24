@@ -2004,7 +2004,7 @@ input:focus-visible {
 
 .contact-location h1,
 .contact-reservation h2 {
-  font-family: var(--sans);
+  font-family: var(--serif);
   font-size: clamp(25px, 3.2vw, 32px);
   line-height: 1.2;
 }
@@ -2049,6 +2049,7 @@ input:focus-visible {
 
 .contact-detail h2 {
   margin-bottom: 2px;
+  font-family: var(--serif);
   font-weight: 700;
 }
 

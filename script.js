@@ -63,7 +63,6 @@ const reservationGuests = document.querySelector("#reservation-guests");
 const reservationWorkshop = document.querySelector("#reservation-workshop");
 const reservationDate = document.querySelector("#reservation-date");
 const reservationTime = document.querySelector("#reservation-time");
-const reservationGroupDetails = document.querySelector("#reservation-group-details");
 const workshopAttendees = document.querySelector("#workshop-attendees");
 const workshopAttendeeList = document.querySelector("#workshop-attendee-list");
 const addWorkshopAttendeeButton = document.querySelector("#workshop-attendee-add");
@@ -75,13 +74,11 @@ if (
   reservationWorkshop &&
   reservationDate &&
   reservationTime &&
-  reservationGroupDetails &&
   workshopAttendees &&
   workshopAttendeeList &&
   addWorkshopAttendeeButton
 ) {
   const workshopField = reservationWorkshop.closest(".reservation-field");
-  const groupDetailsField = reservationGroupDetails.closest(".reservation-field");
   const timeNote = reservationTime.parentElement.querySelector(".reservation-time-note");
   const guestPlaceholder = reservationGuests.options[0].cloneNode(true);
   const personNamePattern = /^[\p{L}\p{M}]+(?:[ .'-][\p{L}\p{M}]+)*$/u;
@@ -133,7 +130,7 @@ if (
 
   const updateGuestOptions = () => {
     const selectedCount = Number(reservationGuests.value);
-    const minGuests = reservationType.value === "Skupinové tvorenie" ? 5 : 1;
+    const minGuests = reservationType.value === "Skupinové tvorenie" ? 6 : 1;
     const maxGuests = reservationType.value === "Voľné tvorenie" ? 5 : 20;
     reservationGuests.replaceChildren(guestPlaceholder.cloneNode(true));
 
@@ -143,6 +140,27 @@ if (
 
     if (selectedCount >= minGuests && selectedCount <= maxGuests) {
       reservationGuests.value = String(selectedCount);
+    }
+  };
+
+  const updateOpeningHours = () => {
+    let openingTime = "09:00";
+    let closingTime = "20:00";
+
+    if (reservationDate.value) {
+      const [year, month, day] = reservationDate.value.split("-").map(Number);
+      const weekday = new Date(year, month - 1, day).getDay();
+      const isWeekend = weekday === 0 || weekday === 6;
+      openingTime = isWeekend ? "10:00" : "09:00";
+      closingTime = isWeekend ? "20:00" : "19:00";
+    }
+
+    reservationTime.min = openingTime;
+    reservationTime.max = closingTime;
+
+    if (reservationTime.value && (reservationTime.value < openingTime || reservationTime.value > closingTime)) {
+      reservationTime.value = "";
+      validateControl(reservationTime);
     }
   };
 
@@ -223,9 +241,6 @@ if (
 
   const updateWorkshopFields = () => {
     const isWorkshop = reservationType.value === "Workshop s lektorom";
-    const isGroup = reservationType.value === "Skupinové tvorenie";
-    groupDetailsField.hidden = !isGroup;
-    reservationGroupDetails.disabled = !isGroup;
     workshopField.hidden = !isWorkshop;
     reservationWorkshop.required = isWorkshop;
     reservationWorkshop.disabled = !isWorkshop;
@@ -253,6 +268,7 @@ if (
     reservationTime.type = "time";
     reservationTime.readOnly = false;
     timeNote.hidden = true;
+    updateOpeningHours();
     syncWorkshopAttendees();
   };
 
@@ -261,6 +277,7 @@ if (
     updateWorkshopFields();
   });
 
+  reservationDate.addEventListener("change", updateOpeningHours);
   reservationWorkshop.addEventListener("change", updateWorkshopFields);
   reservationGuests.addEventListener("change", () => {
     if (reservationType.value === "Workshop s lektorom") {
@@ -288,6 +305,7 @@ if (
   });
 
   updateGuestOptions();
+  updateOpeningHours();
   const params = new URLSearchParams(window.location.search);
   if (params.get("typ") === "workshop") {
     reservationType.value = "Workshop s lektorom";
