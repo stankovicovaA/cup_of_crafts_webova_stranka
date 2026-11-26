@@ -1993,14 +1993,10 @@ input:focus-visible {
 
 .contact-pattern {
   height: 34px;
-  background-color: #e8d9ad;
-  background-image:
-    radial-gradient(ellipse at 50% 0%, var(--cream) 0 5px, transparent 6px),
-    radial-gradient(ellipse at 100% 50%, var(--cream) 0 5px, transparent 6px),
-    radial-gradient(ellipse at 50% 100%, var(--cream) 0 5px, transparent 6px),
-    radial-gradient(ellipse at 0% 50%, var(--cream) 0 5px, transparent 6px),
-    radial-gradient(circle at 50% 50%, var(--cream) 0 4px, transparent 5px);
-  background-size: 32px 32px;
+  background-image: url("img/scrapbook_papier.png");
+  background-position: center;
+  background-size: 300px auto;
+  background-repeat: repeat;
 }
 
 .contact-location {
