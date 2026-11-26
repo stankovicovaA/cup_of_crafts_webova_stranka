@@ -462,6 +462,14 @@ input:focus-visible {
   color: white;
 }
 
+.study-notice {
+  margin: 0;
+  padding: 0 24px 16px;
+  color: rgb(255 255 255 / 78%);
+  font-size: 12px;
+  text-align: center;
+}
+
 .footer-inner {
   display: grid;
   width: min(100% - 64px, 1200px);
