@@ -987,6 +987,10 @@ input:focus-visible {
   pointer-events: none;
 }
 
+.cafe-menu-frame-shape--mobile {
+  display: none;
+}
+
 .pricing-card {
   position: relative;
   z-index: 1;
@@ -1229,6 +1233,30 @@ input:focus-visible {
   .brand-seal-footer {
     width: 110px;
     height: 110px;
+  }
+}
+
+@media (max-width: 768px) {
+  .cafe-menu-frame {
+    width: min(100%, 540px);
+    aspect-ratio: auto;
+    padding-block: clamp(24px, 8vw, 42px);
+  }
+
+  .cafe-menu-frame > .cafe-menu-frame-shape:not(.cafe-menu-frame-shape--mobile) {
+    display: none;
+  }
+
+  .cafe-menu-frame-shape--mobile {
+    display: block;
+  }
+
+  .cafe-menu-card {
+    width: 76%;
+  }
+
+  .cafe-menu-columns {
+    grid-template-columns: 1fr;
   }
 }
 
@@ -1968,7 +1996,7 @@ input:focus-visible {
   }
 
   .cafe-menu-card {
-    width: 84%;
+    width: 76%;
     padding: 22px 18px;
   }
 
