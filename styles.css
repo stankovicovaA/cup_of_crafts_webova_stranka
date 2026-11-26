@@ -991,6 +991,10 @@ input:focus-visible {
   display: none;
 }
 
+.pricing-frame-shape--mobile {
+  display: none;
+}
+
 .pricing-card {
   position: relative;
   z-index: 1;
@@ -1237,6 +1241,34 @@ input:focus-visible {
 }
 
 @media (max-width: 768px) {
+  .pricing-frame {
+    width: min(100% - 32px, 540px);
+    aspect-ratio: auto;
+    padding-block: clamp(48px, 10vw, 64px);
+  }
+
+  .pricing-frame > .pricing-frame-shape:not(.pricing-frame-shape--mobile) {
+    display: none;
+  }
+
+  .pricing-frame-shape--mobile {
+    display: block;
+  }
+
+  .pricing-card {
+    width: 72%;
+    padding-inline: clamp(12px, 4vw, 24px);
+  }
+
+  .pricing-card p,
+  .pricing-card .pricing-note {
+    font-size: clamp(15px, 4vw, 18px);
+  }
+
+  .pricing-value {
+    white-space: nowrap;
+  }
+
   .cafe-menu-frame {
     width: min(100%, 540px);
     aspect-ratio: auto;
@@ -1474,19 +1506,19 @@ input:focus-visible {
   }
 
   .pricing-frame {
-    width: calc(100% - 20px);
+    width: calc(100% - 32px);
     aspect-ratio: auto;
     min-height: 0;
-    padding-block: 42px;
+    padding-block: 48px;
   }
 
   .pricing-card {
-    width: 78%;
+    width: 72%;
     padding: 18px 12px;
   }
 
   .pricing-card p {
-    font-size: 18px;
+    font-size: 16px;
   }
 
   .creation-groups-inner {
