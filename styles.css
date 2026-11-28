@@ -1811,7 +1811,32 @@ input:focus-visible {
 
 @media (max-width: 1056px) {
   .cafe-offer-grid {
-    grid-template-columns: repeat(2, minmax(0, 315px));
+    grid-template-columns: 1fr;
+    gap: 14px;
+  }
+
+  .cafe-offer-card {
+    display: grid;
+    max-width: none;
+    grid-template-columns: 100px minmax(0, 1fr);
+    align-items: center;
+    gap: 16px;
+    height: auto;
+    min-height: 124px;
+    justify-self: stretch;
+    padding: 12px;
+    border-radius: 26px;
+  }
+
+  .cafe-offer-card img {
+    aspect-ratio: 1;
+    border-radius: 18px;
+  }
+
+  .cafe-offer-card h3 {
+    margin: 0;
+    font-size: 16px;
+    text-align: left;
   }
 }
 
@@ -1895,10 +1920,6 @@ input:focus-visible {
     gap: 28px;
   }
 
-  .cafe-offer-grid {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-  }
-
   .cafe-menu-card {
     padding-inline: 22px;
   }
@@ -1939,33 +1960,6 @@ input:focus-visible {
   .cafe-offer h2 {
     margin-bottom: 22px;
     font-size: 23px;
-  }
-
-  .cafe-offer-grid {
-    grid-template-columns: minmax(0, 1fr);
-    gap: 14px;
-  }
-
-  .cafe-offer-card {
-    display: grid;
-    grid-template-columns: 100px minmax(0, 1fr);
-    align-items: center;
-    gap: 16px;
-    height: auto;
-    min-height: 124px;
-    padding: 12px;
-    border-radius: 26px;
-  }
-
-  .cafe-offer-card img {
-    aspect-ratio: 1;
-    border-radius: 18px;
-  }
-
-  .cafe-offer-card h3 {
-    margin: 0;
-    font-size: 16px;
-    text-align: left;
   }
 
   .cafe-menu {
