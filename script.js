@@ -301,7 +301,15 @@ if (
     if (invalidControls.length > 0) {
       event.preventDefault();
       invalidControls[0].focus();
+      return;
     }
+
+    event.preventDefault();
+    const body = [...new FormData(reservationForm).entries()]
+      .map(([name, value]) => `${name}: ${value}`)
+      .join("\n");
+    const subject = encodeURIComponent("Rezervácia CUP of CRAFTS");
+    window.location.href = `mailto:cupofcrafts@gmail.com?subject=${subject}&body=${encodeURIComponent(body)}`;
   });
 
   updateGuestOptions();
